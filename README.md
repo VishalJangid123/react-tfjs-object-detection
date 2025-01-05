@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Object Detection using TensorFlow.js and the COCO-SSD model
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project demonstrates real-time object detection using TensorFlow.js and the COCO-SSD model. The application requests camera permission from the user, and once granted, it starts detecting objects from the video stream and overlays the predictions (bounding boxes and labels) on a canvas.
 
-## Available Scripts
+## Live Demo
 
-In the project directory, you can run:
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Requests camera permission from the user.
+- Displays the live camera feed.
+- Performs real-time object detection using the COCO-SSD model from TensorFlow.js.
+- Displays bounding boxes around detected objects in the camera feed.
+- Continuously updates the predictions as the video plays.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React**: For building the user interface.
+- **TensorFlow.js**: For performing real-time object detection.
+- **COCO-SSD**: A pre-trained object detection model in TensorFlow.js.
+- **Canvas API**: To draw bounding boxes and labels around detected objects.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+### 1. Clone the repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/VishalJangid123/react-tfjs-object-detection.git
+cd react-tfjs-object-detection
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Install dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ensure you have **Node.js** installed on your system. Then, run:
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. Start the development server
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Run the following command to start the application locally:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
 
-## Learn More
+This will open the application in your browser at `http://localhost:3000`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## How it Works
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Camera Permission**: When the app is loaded, it will check if the browser has permission to access the camera.
+2. **Requesting Permission**: If the camera permission is not granted, it will ask the user to allow camera access.
+3. **Object Detection**: Once the camera stream is available, the app uses TensorFlow.js and the COCO-SSD model to perform object detection on the live video stream.
+4. **Displaying Results**: The detected objects are drawn with bounding boxes and labels on an HTML `<canvas>` element placed on top of the video feed.
