@@ -3,7 +3,7 @@
 This project demonstrates real-time object detection using TensorFlow.js and the COCO-SSD model. The application requests camera permission from the user, and once granted, it starts detecting objects from the video stream and overlays the predictions (bounding boxes and labels) on a canvas.
 
 ## Live Demo
-
+https://vishaljangid123.github.io/react-tfjs-object-detection/
 
 ## Features
 
