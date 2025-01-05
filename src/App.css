@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+video {
+  max-width: 100%;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
